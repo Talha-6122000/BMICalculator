@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_white"
+    tools:context=".ui.home.HomeFragment">
+    <LinearLayout
+        android:id="@+id/weightHeightTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/weight"
+            android:gravity="center"
+            android:textSize="@dimen/tvSize"
+            />
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/height"
+            android:gravity="center"
+            android:textSize="@dimen/tvSize"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightHeightTextLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/editTextMargin">
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/white_backgrond_edit_text"
+            android:gravity="center"
+            android:text="75.00"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/white_backgrond_edit_text"
+            android:gravity="center"
+            android:text="170.2"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ft_inch_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/feetEditText"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/white_backgrond_edit_text"
+                android:gravity="center"
+                android:text="5'"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/inchEditText"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/white_backgrond_edit_text"
+                android:gravity="center"
+                android:text="7''"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/radioButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_weight="1">
+
+            <RadioGroup
+                android:id="@+id/weightUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_radio_group_tab_background"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/lb_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.50"
+                    android:background="@drawable/drawable_units_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="lb"
+                    android:textColor="@drawable/units_tab_text_color_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/kg_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.50"
+                    android:background="@drawable/drawable_units_tab_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="kg"
+                    android:textColor="@drawable/units_tab_text_color_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_weight="1">
+
+            <RadioGroup
+                android:id="@+id/heigts_Units"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_radio_group_tab_background"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/ft_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.50"
+                    android:background="@drawable/drawable_units_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="ft-in"
+                    android:textColor="@drawable/units_tab_text_color_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/cm_radio"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.50"
+                    android:background="@drawable/drawable_units_tab_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textColor="@drawable/units_tab_text_color_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+<TextView
+    android:id="@+id/time_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="@string/time"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:layout_below="@id/radioButtonLayout"
+    android:layout_marginTop="30dp"
+    />
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        >
+        <TextView
+            android:id="@+id/today_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="75dp"
+            android:text="@string/today"
+            android:background="@drawable/white_backgrond_edit_text"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/today_time"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/white_backgrond_edit_text"
+            android:gravity="center"
+            android:text="@string/morning"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/age_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/age"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_below="@id/timeLayout"
+        android:layout_marginTop="30dp"
+        />
+    <com.google.android.material.slider.Slider
+        android:id="@+id/age_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_below="@id/age_tv"
+        android:background="@drawable/white_backgrond_edit_text"
+        android:maxLength="99"
+        />
+
+</RelativeLayout>
+</layout>
