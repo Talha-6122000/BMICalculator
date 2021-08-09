@@ -256,17 +256,76 @@
         android:layout_below="@id/timeLayout"
         android:layout_marginTop="30dp"
         />
+
     <com.google.android.material.slider.Slider
         android:id="@+id/age_selector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/age_tv"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/white_backgrond_edit_text"
+        android:maxLength="99" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/age_selector"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <RadioGroup
+            android:id="@+id/genderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_radio_group_tab_background"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male_radio"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="0.50"
+                android:background="@drawable/drawable_units_tab_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Male"
+                android:textColor="@drawable/units_tab_text_color_selector"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/female_radio"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="0.50"
+                android:background="@drawable/drawable_units_tab_selector"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="Female"
+                android:layout_marginStart="10dp"
+                android:textColor="@drawable/units_tab_text_color_selector"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_below="@id/age_tv"
         android:background="@drawable/white_backgrond_edit_text"
-        android:maxLength="99"
+        android:backgroundTint="@color/purple_700"
+        android:layout_marginBottom="10dp"
+        android:text="@string/calculate"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center"
         />
-
 </RelativeLayout>
 </layout>

@@ -36,21 +36,6 @@ class HomeFragment : Fragment() {
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
 //        })
-        binding.weightUnits.setOnCheckedChangeListener { radioGroup: RadioGroup, checkedId: Int ->
-
-            // Here is the checkId is METRIC UNITS view then make the view visible else US UNITS view.
-            if (checkedId == R.id.lb_radio) {
-                //Get the text from the weightEditText
-                //As it is in  kg let's convert it into lbs
-                val weightInKG=binding.weightEditText.text.toString().toInt()
-                val weightInLB = (weightInKG/ 0.45359237)
-                binding.weightEditText.setText(weightInLB.toString())
-
-
-            } else {
-            }
-        }
-
         return root
     }
 
