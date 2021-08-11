@@ -1,15 +1,16 @@
 package com.example.bmicalculator.ui.dashboard
 
+import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.bmicalculator.R
 import com.example.bmicalculator.databinding.FragmentDashboardBinding
+import lecho.lib.hellocharts.model.PieChartData
+import lecho.lib.hellocharts.model.SliceValue
+
 
 class DashboardFragment : Fragment() {
 
@@ -31,13 +32,33 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val pieData = ArrayList<SliceValue>()
+        pieData.add(SliceValue(15F, Color.BLUE))
+        pieData.add(SliceValue(25F, Color.GRAY))
+        pieData.add(SliceValue(10F, Color.RED))
+        pieData.add(SliceValue(60F, Color.MAGENTA))
+        val pieChartData = PieChartData(pieData)
+        binding.chart.pieChartData=pieChartData
+        setHasOptionsMenu(true)
         return root
+
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.bmi_menu,menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.recent->
+            {
+                Toast.makeText(requireContext(),"This show the recent calculation of BMI",Toast.LENGTH_SHORT).show()
+            }
+
+        }
+       return true
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

@@ -9,5 +9,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_white">#E8EAED</color>
     <color name="dark_white2">#CFD4DD</color>
+    <color name="light_yellow">#FFEB3B</color>
+    <color name="very_severly_underweight">#2196F3</color>
+    <color name="severly_underweight">#03A9F4</color>
+    <color name="underweight">#00BCD4</color>
+    <color name="normal">#8BC34A</color>
+    <color name="overweight">#050505</color>
+    <color name="obese_class_i">#FFC107</color>
+    <color name="obese_class_ii">#FFC107</color>
+    <color name="obese_class_iii">#FFC107</color>
 
 </resources>

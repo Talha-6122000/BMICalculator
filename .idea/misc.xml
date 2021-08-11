@@ -8,13 +8,17 @@
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/drawable/drawable_radio_group_tab_background.xml" value="0.119" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.171" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.171" />
+        <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/drawable/points_drawable.xml" value="0.1" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/drawable/units_tab_text_color_selector.xml" value="0.171" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/drawable/white_backgrond_edit_text.xml" value="0.171" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/fragment_dashboard.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/age_layout.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
+        <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/menu/bmi_menu.xml" value="0.1" />
         <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Talha/AndroidStudioProjects/BMICalculator/app/src/main/res/menu/calculate_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
