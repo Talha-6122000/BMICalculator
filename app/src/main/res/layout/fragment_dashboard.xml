@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:gravity="center"
         android:orientation="vertical">
@@ -21,7 +19,7 @@
             android:id="@+id/bmi_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your BMI is..."
+            android:text="@string/your_bmi_is"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="25sp"
@@ -63,8 +61,8 @@
                 android:id="@+id/height_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5ft 7in |"
-                android:layout_marginLeft="5dp"
+                android:text="@string/_5ft_7in"
+                android:layout_marginStart="5dp"
                 />
             <TextView
                 android:id="@+id/gender_tv"

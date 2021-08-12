@@ -3,23 +3,141 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/dark_white"
+        >
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.notifications.NotificationsFragment">
+        <RadioGroup
+            android:id="@+id/dayWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/drawable_radio_group_tab_background"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/text_notifications"
+            <RadioButton
+                android:id="@+id/day"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.50"
+                android:background="@drawable/drawable_units_tab_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/day"
+                android:textColor="@drawable/units_tab_text_color_selector"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/week"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.50"
+                android:background="@drawable/drawable_units_tab_selector"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/week"
+                android:textColor="@drawable/units_tab_text_color_selector"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/month"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.50"
+                android:background="@drawable/drawable_units_tab_selector"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/month"
+                android:textColor="@drawable/units_tab_text_color_selector"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+    <LinearLayout
+        android:id="@+id/bmi_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_below="@id/dayWeek"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+         android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/bmi"
+          android:textColor="@color/black"
+          android:textSize="25sp"
+          android:layout_gravity="start"
+          />
+        <TextView
+            android:id="@+id/update_bmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            android:textColor="#3F51B5"
+            />
+    </LinearLayout>
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/bmi_graph"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/bmi_layout"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:background="@color/teal_200"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+    <LinearLayout
+        android:id="@+id/weight_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmi_graph"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_gravity="start"
+            />
+        <TextView
+            android:id="@+id/update_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            android:textColor="#3F51B5"
+            />
+    </LinearLayout>
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/weight_graph"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/weight_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        />
+</RelativeLayout>
+    </ScrollView>
 </layout>
